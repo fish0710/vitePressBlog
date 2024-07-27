@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "一个viteP的文档平台"
+  name: "Fish 59 MD"
   text: "By Fish59"
   tagline: 可以快速搭建一个基于vitePress的文档平台
   actions:
@@ -15,12 +15,12 @@ hero:
       link: /api-examples
 
 features:
-  - title:  A
+  - title:  MD
     details: 你可以通过Markdown语法来编写文档
-  - title:  B
-    details: 简单描述
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title:  组件
+    details: 可以全局定义组件和引入组件
+  - title: 快速
+    details: push和meger自动构建部署
 ---
 
 <CustomComponentfrom />
