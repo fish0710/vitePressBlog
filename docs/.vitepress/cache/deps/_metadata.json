@@ -1,0 +1,46 @@
+{
+  "hash": "cdb4fa4b",
+  "configHash": "c72f304f",
+  "lockfileHash": "41345344",
+  "browserHash": "ef56351a",
+  "optimized": {
+    "vue": {
+      "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "2a51d1bb",
+      "needsInterop": false
+    },
+    "vitepress > @vue/devtools-api": {
+      "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.3.7/node_modules/@vue/devtools-api/dist/index.js",
+      "file": "vitepress___@vue_devtools-api.js",
+      "fileHash": "247a3f84",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/core": {
+      "src": "../../../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.34/node_modules/@vueuse/core/index.mjs",
+      "file": "vitepress___@vueuse_core.js",
+      "fileHash": "ff6f10b3",
+      "needsInterop": false
+    },
+    "oh-my-live2d": {
+      "src": "../../../../node_modules/.pnpm/oh-my-live2d@0.19.3/node_modules/oh-my-live2d/dist/index.js",
+      "file": "oh-my-live2d.js",
+      "fileHash": "26486c74",
+      "needsInterop": false
+    },
+    "element-ui": {
+      "src": "../../../../node_modules/.pnpm/element-ui@2.15.14_vue@3.4.34/node_modules/element-ui/lib/element-ui.common.js",
+      "file": "element-ui.js",
+      "fileHash": "de42b2be",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-LX5CMFKJ": {
+      "file": "chunk-LX5CMFKJ.js"
+    },
+    "chunk-V4OQ3NZ2": {
+      "file": "chunk-V4OQ3NZ2.js"
+    }
+  }
+}
