@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "My Awesome Project",
-  base: 'vitePressBlog', // 这里设置为你的仓库名
+  base: '/vitePressBlog/', // 这里设置为你的仓库名
   description: "A VitePress Site",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
