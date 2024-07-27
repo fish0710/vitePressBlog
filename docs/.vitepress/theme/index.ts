@@ -6,20 +6,7 @@ import DefaultTheme from 'vitepress/theme'
 export default {
   extends: DefaultTheme,
   async enhanceApp({ app }) {
-    const { loadOml2d } = await import('oh-my-live2d');
-
-    // 使用 mixin 在所有组件中添加 mounted 钩子
-    
-        loadOml2d({
-          models: [
-            {
-              path: 'https://raw.githubusercontent.com/iCharlesZ/vscode-live2d-models/master/model-library/hijiki/hijiki.model.json'
-            }
-          ]
-        });
-
-
-    // 注册自定义全局组件
+    app.config.globalProperties.isLoadLive2d = false;//全局设置一个属性是否加载live2d，避免重复加载
     app.component('CustomComponentfrom', CustomComponent /* ... */)
   }
 } satisfies Theme
