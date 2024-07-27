@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "一个viteP的文档平台"
+  name: "一个vitePress的文档平台"
   text: "By Fish59"
   tagline: 可以快速搭建一个基于vitePress的文档平台
   actions:
