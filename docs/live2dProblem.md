@@ -57,10 +57,32 @@ export default {
 
 需要在全局增加一个属性来判断live2d是否被生成，生成后就不执行了
 
-<CustomComponentfrom />
 
 ## 待解决问题
 
 ### 组件引入是独立的
 
 在index.md引入之后，其他的文档没有，所以直接访问其他文档不会有live2d出现
+
+解决：
+> 在Layout插槽中在通用插槽里引入live2d组件
+```js
+<script setup>
+import DefaultTheme from 'vitepress/theme'
+const { Layout } = DefaultTheme
+</script>
+
+<template>
+  <Layout>
+    <template #nav-bar-title-before>
+      <CustomComponentfrom />
+    </template>
+  </Layout>
+</template>
+
+<style scoped>
+.title {
+  color: red;
+}
+</style>
+```
