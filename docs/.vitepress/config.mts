@@ -3,7 +3,6 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Fish59 Blog",
-  base: "/vitePressBlog/", // 这里设置为你的仓库名
   description: "vitePress插件使用",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
