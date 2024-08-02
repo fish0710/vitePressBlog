@@ -15,14 +15,20 @@ provide("toggle-appearance", async ({ clientX: x, clientY: y }: MouseEvent) => {
     isDark.value = !isDark.value;
     return;
   }
-
+  //斜线变化
   const clipPath = [
-    `circle(0px at ${x}px ${y}px)`,
-    `circle(${Math.hypot(
-      Math.max(x, innerWidth - x),
-      Math.max(y, innerHeight - y)
-    )}px at ${x}px ${y}px)`,
+    `polygon(110% 0%, 210% 0%, 200% 100%, 100% 100%)`,
+    `polygon(0% 0%, 110% 0%, 100% 100%, -10% 100%)`,
   ];
+
+  // 圆形变化
+  // const clipPath = [
+  //   `circle(0px at ${x}px ${y}px)`,
+  //   `circle(${Math.hypot(
+  //     Math.max(x, innerWidth - x),
+  //     Math.max(y, innerHeight - y)
+  //   )}px at ${x}px ${y}px)`,
+  // ];
 
   await document.startViewTransition(async () => {
     isDark.value = !isDark.value;
