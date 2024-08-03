@@ -8,7 +8,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "首页", link: "/" },
-      { text: "示例", link: "/live2dProblem" },
+      { text: "文档", link: "/live2dProblem" },
     ],
     sidebar: [
       {
