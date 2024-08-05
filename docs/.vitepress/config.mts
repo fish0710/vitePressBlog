@@ -14,10 +14,10 @@ export default defineConfig({
       {
         text: "文档",
         items: [
-          { text: "live2d使用及问题解决", link: "/live2dProblem" },
-          { text: "ViewTransitionAPI使用", link: "/viewTransitionAPI" },
           { text: "md示例", link: "/markdown-examples" },
           { text: "API示例", link: "/api-examples" },
+          { text: "live2d使用及问题解决", link: "/live2dProblem" },
+          { text: "ViewTransitionAPI使用", link: "/viewTransitionAPI" },
         ],
       },
     ],
