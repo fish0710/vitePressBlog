@@ -4,8 +4,6 @@ import { useData } from "vitepress";
 import { provide, nextTick } from "vue";
 
 const { isDark } = useData();
-const { Layout } = DefaultTheme;
-
 const enableTransitions = () => "startViewTransition" in document;
 
 provide("toggle-appearance", async ({ clientX: x, clientY: y }: MouseEvent) => {

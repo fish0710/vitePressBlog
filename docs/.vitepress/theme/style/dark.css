@@ -1,0 +1,24 @@
+@import './dark.css';
+:root{
+    --themeTabs:rgb(238, 238, 238);
+     /* // 主题切换开关背景颜色 */
+    --themeTabs-sunny-color:#ffbd2e; 
+    /* //太阳颜色 */
+    --themeTabs-sunny-background-color:#fff;
+     /* // 太阳tabs背景颜色 */
+    --themeTabs-sunny-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.2);
+     /* //太阳tabs阴影 */
+    --themeTabs-moon-background-color:rgb(238, 238, 238); 
+    /* // 月亮tabs背景颜色 */
+    --themeTabs-moon-color:rgba(0, 0, 0, 0.6);
+    /* // 月亮颜色 */
+}
+
+:root.dark{
+    --themeTabs:rgb(56, 56, 56);
+    --themeTabs-sunny-color:hsla(0, 0%, 100%, .55);
+    --themeTabs-sunny-background-color:rgb(56, 56, 56);
+    --themeTabs-sunny-shadow:none;
+    --themeTabs-moon-background-color:rgb(75, 75, 75);
+    --themeTabs-moon-color:#FFF;
+}

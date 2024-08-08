@@ -15,6 +15,12 @@
 
 
 css属性view-transition-name为选定的元素提供单独的标识名称，并使其参与与根视图过渡不同的单独视图过渡——或者如果指定了 none 值，则不参与视图过渡。
+
+就是说，如果某个元素设置了view-transition-name属性，那么它和根元素的过渡动画将会被分离，而不会和其他元素的过渡动画混合在一起。
+
+比如当根元素过渡动画结束，设置了view-transition-name属性的元素的过渡动画如果还没结束就会继续执行，而不会因为根元素的过渡动画结束而结束。
+
+伪元素数据结构如下：
 ```
 ::view-transition
 ├─ ::view-transition-group(root)
@@ -41,7 +47,7 @@ css属性view-transition-name为选定的元素提供单独的标识名称，并
 
 ## 使用方法
 
-### 不依赖CSS
+### 自定义动画
 
 1. 调用document.startViewTransition方法，传入回调函数。
 2. 在回调函数中执行DOM更新操作。
@@ -149,21 +155,58 @@ const doClick = () => {
 }
 </style>
 ```
+这种办法如果父组件调用startViewTransition方法，子组件有::view-transition-old/new伪类也会执行动画。
 
-### 自定义动画
-
-1. 为::view-transition-old和::view-transition-new设置animation属性为none，防止影响自定义动画
-2. 在document.startViewTransition方法中，传入回调函数，在回调函数中执行DOM更新操作。
-3. 在回调函数执行成功后，调用ViewTransition对象的ready方法，使用animate方法为::view-transition-old和::view-transition-new设置自定义动画效果。
 
 ### 示例
 
 1. 主题切换动画(圆形变化，矩形变化，平行四边形变化)
+```js
+
+  // 动画路径
+  const clipPath = [
+    `circle(0px at ${x}px ${y}px)`,
+    `circle(${Math.hypot(
+      Math.max(x, innerWidth - x),
+      Math.max(y, innerHeight - y)
+    )}px at ${x}px ${y}px)`,
+  ];
+
+  // 执行动画
+  await document.startViewTransition(async () => {
+    isDark.value = !isDark.value;// 切换主题
+    await nextTick();
+  }).ready;
+
+  // 定义动画效果
+  document.documentElement.animate(
+    { clipPath: isDark.value ? clipPath.reverse() : clipPath },
+    {
+      duration: 300,
+      easing: "ease-in",
+      pseudoElement: `::view-transition-${isDark.value ? "old" : "new"}(root)`,
+    }
+  );
+</style>
+```
 2. 元素移动动画
+```js
+  // 执行动画
+ const t = document.startViewTransition(() => _doClick());
+  t.ready.then(() => {
+    element.value?.animate(
+      [{ transform: "translateX(0px)" }, { transform: "translateX(100px)" }],
+      {
+        duration: 1000, // 动画持续时间，单位为毫秒
+        easing: "ease-in-out" // 缓动函数
+      }
+    );
+  });
+````
 
-### 问题
+### 注意
 
-1. 在Vue中使用::view-transition伪类需要关闭scoped样式，否则伪类无法生效。
+1. 在Vue中使用::view-transition伪类需要关闭scoped样式，否则伪类::view-transition-old/new无法生效。
 2. 父组件调用startViewTransition方法，与子组件有关的::view-transition-old/new也会执行动画
 
 

@@ -1,3 +1,4 @@
+import { fileURLToPath } from "url";
 import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
@@ -14,10 +15,11 @@ export default defineConfig({
       {
         text: "文档",
         items: [
-          { text: "md示例", link: "/markdown-examples" },
-          { text: "API示例", link: "/api-examples" },
           { text: "live2d使用及问题解决", link: "/live2dProblem" },
           { text: "ViewTransitionAPI使用", link: "/viewTransitionAPI" },
+          { text: "vitepress自定义内部组件", link: "/自定义切换主题开关" },
+          { text: "md示例", link: "/markdown-examples" },
+          { text: "API示例", link: "/api-examples" },
         ],
       },
     ],
@@ -25,5 +27,10 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/vuejs/vitepress" },
     ],
-  },
+  },vite: {
+    resolve: {
+      alias: [{
+        find:/^.*\/VPSwitchAppearance\.vue$/,
+        replacement:fileURLToPath(new URL('./theme/components/ThemeSwitch.vue', import.meta.url))
+      }]}}
 });
