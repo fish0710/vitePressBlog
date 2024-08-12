@@ -1,5 +1,6 @@
 import { fileURLToPath } from "url";
 import { defineConfig } from "vitepress";
+import MarkdownDemo from "../../plugin/MarkdownDemo";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -32,5 +33,9 @@ export default defineConfig({
       alias: [{
         find:/^.*\/VPSwitchAppearance\.vue$/,
         replacement:fileURLToPath(new URL('./theme/components/ThemeSwitch.vue', import.meta.url))
-      }]}}
+      }]},
+      plugins:[
+        MarkdownDemo(),
+      ]
+    }
 });

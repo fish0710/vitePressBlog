@@ -86,3 +86,5 @@ const { Layout } = DefaultTheme
 }
 </style>
 ```
+=== ./.vitepress/theme/components/demo.vue
+

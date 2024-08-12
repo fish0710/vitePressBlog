@@ -62,8 +62,8 @@ const _doClick = () => {
   a.value++;
 };
 const doClick = () => {
-  const t = document.startViewTransition(() => _doClick());
-  t.ready.then(() => {
+  const t = document.startViewTransition(() => _doClick());// 执行startViewTransition方法
+  t.ready.then(() => {// 视图即将开始动画时，Promise会被兑现
     element.value?.animate(
       [{ transform: "translateX(0px)" }, { transform: "translateX(100px)" }],
       {
@@ -114,7 +114,7 @@ let a = ref(1);
 const _doCLick = () => {// 响应式数据变化会影响DOM元素更新
   a.value++;
 };
-const doClick = () => {
+const doClick = () => { // 点击按钮触发动画
   document.startViewTransition(() => _doCLick());
 };
 </script>
