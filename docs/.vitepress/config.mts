@@ -1,29 +1,20 @@
 import { fileURLToPath } from "url";
 import { defineConfig } from "vitepress";
 import MarkdownDemo from "../../plugin/MarkdownDemo";
+import sidebar from "./sidebar.mts";
+import { withPwa } from "@vite-pwa/vitepress";
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withPwa(defineConfig({
   title: "Fish59 Blog",
   description: "vitePress插件使用",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "首页", link: "/" },
-      { text: "文档", link: "/live2dProblem" },
+      { text: "文档", link: "../示例文档/index.md" },
     ],
-    sidebar: [
-      {
-        text: "文档",
-        items: [
-          { text: "live2d使用及问题解决", link: "/live2dProblem" },
-          { text: "ViewTransitionAPI使用", link: "/viewTransitionAPI" },
-          { text: "vitepress自定义内部组件", link: "/自定义切换主题开关" },
-          { text: "md示例", link: "/markdown-examples" },
-          { text: "API示例", link: "/api-examples" },
-        ],
-      },
-    ],
+    sidebar: sidebar,
 
     socialLinks: [
       { icon: "github", link: "https://github.com/fish0710/vitePressBlog" },
@@ -38,4 +29,4 @@ export default defineConfig({
         MarkdownDemo(),
       ]
     }
-});
+}))

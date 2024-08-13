@@ -5,13 +5,7 @@ layout: home
 hero:
   name: "Fish59 随记"
   tagline: 知其无了奈何而安之若命
-  actions:
-    - theme: brand
-      text: md文档
-      link: /markdown-examples
-    - theme: alt
-      text: API示例
-      link: /api-examples
+
 # features:
 #   - title:  MD
 #     details: 你可以通过Markdown语法来编写文档
