@@ -3,6 +3,7 @@ import { defineConfig } from "vitepress";
 import MarkdownDemo from "../../plugin/MarkdownDemo";
 import sidebar from "./sidebar.mts";
 import nav from "./nav.mts";
+import AutoSidebarPlugin from "vitepress-auto-sidebar-plugin";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -16,14 +17,23 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/fish0710/vitePressBlog" },
     ],
-  },vite: {
+  },
+  vite: {
     resolve: {
-      alias: [{
-        find:/^.*\/VPSwitchAppearance\.vue$/,
-        replacement:fileURLToPath(new URL('./theme/components/ThemeSwitch.vue', import.meta.url))
-      }]},
-      plugins:[
-        MarkdownDemo(),
-      ]
-    }
-})
+      alias: [
+        {
+          find: /^.*\/VPSwitchAppearance\.vue$/,
+          replacement: fileURLToPath(
+            new URL("./theme/components/ThemeSwitch.vue", import.meta.url)
+          ),
+        },
+      ],
+    },
+    plugins: [
+      MarkdownDemo(),
+      AutoSidebarPlugin({
+        srcDir: "./docs",
+      }),
+    ],
+  },
+});
