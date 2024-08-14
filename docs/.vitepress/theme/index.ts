@@ -5,11 +5,14 @@ import DefaultTheme from "vitepress/theme";
 import Layout from "./components/Layout.vue";
 import './style/dark.css'
 import ThemeSwitch from "./components/ThemeSwitch.vue";
+import "element-plus/dist/index.css";
+import elementplus from "element-plus";
 
 export default {
   extends: DefaultTheme,
   Layout,
   async enhanceApp({ app }) {
+    app.use(elementplus);
     app.config.globalProperties.isLoadLive2d = false; //全局设置一个属性是否加载live2d，避免重复加载
     app.component("CustomComponentfrom", CustomComponent /* ... */);
     app.component("ThemeSwitch", ThemeSwitch);

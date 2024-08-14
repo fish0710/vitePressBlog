@@ -6,11 +6,14 @@ hero:
   name: "Fish59 随记"
   tagline:  A week is 2% of a year
 
-# features:
-#   - title:  MD
-#     details: 你可以通过Markdown语法来编写文档
-#   - title:  组件
-#     details: 可以全局定义组件和引入组件
-#   - title: 快速
-#     details: push和meger自动构建部署
+features:
+  - icon: 💡
+    title: 前端学习记录
+    details: Vue、React、TS
+  - icon: 📦
+    title: APi、库学习记录
+    details: WebAPI、库、工具
+  - icon: 🛠️
+    title: vitePress
+    details: 自定义
 ---
