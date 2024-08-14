@@ -67,6 +67,29 @@ export default {
           { text: "路由转发和反向代理", link: "../Ng相关/路由转发和反向代理.md" },
         ],  
     }],
+    '/dart/':[{
+      text:"Dart",
+      collapsed:false,
+      link: "../dart/index.md" ,
+      items: [
+        { text: "基础语法", link: "../dart/基础语法.md" },
+      ],  
+  }],
+  '/rust/':[{
+    text:"Rust",
+    collapsed:false,
+    link: "../rust/index.md" ,
+    items: [
+      { text: "基础语法", link: "../rust/基础语法.md" },
+    ],  
+},{
+  text:"Rust",
+  collapsed:false,
+  link: "../rust/index.md" ,
+  items: [
+    { text: "基础语法", link: "../rust/基础语法.md" },
+  ],  
+}],
     '/示例文档/':[     
       {
         text: "示例文档",
