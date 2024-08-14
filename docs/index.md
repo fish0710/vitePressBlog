@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Fish59 随记"
-  tagline: 知其无了奈何而安之若命
+  tagline:  A week is 2% of a year
 
 # features:
 #   - title:  MD
