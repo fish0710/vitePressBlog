@@ -1,14 +1,14 @@
 module.exports = {
   markdown: {
-    entry: ["./docs/前端/vitePress/自定义切换主题开关.md"],
-    entryLocale: "zh-CN",
+    entry: ["./js-to-dart-part1.md"],
+    entryLocale: "en-US",
     entryExtension: ".md",
-    outputLocales: ["en-US"],
+    outputLocales: ["zn-CN"],
     outputExtensions: (locale, { getDefaultExtension }) => {
-      return ".md";
+      return ".zn-CN.md";
     },
     outputFileName: (locale, targetFileName) => {
-      return targetFileName.replace("docs", "docs\\" + locale);
+      return targetFileName.replace("docs");
     },
   },
 };
