@@ -1,0 +1,1 @@
+import{h as e,c as t,a}from"./chunks/framework.Cdb2BMi-.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"语言/语言.md","filePath":"语言/语言.md"}'),r={name:"语言/语言.md"};function o(s,c,n,_,p,d){return a(),t("div")}const f=e(r,[["render",o]]);export{m as __pageData,f as default};
