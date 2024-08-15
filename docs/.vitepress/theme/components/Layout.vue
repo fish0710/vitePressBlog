@@ -2,6 +2,7 @@
 import DefaultTheme from "vitepress/theme";
 import { useData } from "vitepress";
 import { provide, nextTick } from "vue";
+import I18nSelector from "./I18nSelector.vue";
 
 const { isDark } = useData();
 const enableTransitions = () => "startViewTransition" in document;
@@ -47,6 +48,7 @@ provide("toggle-appearance", async ({ clientX: x, clientY: y }: MouseEvent) => {
     <template #nav-bar-title-before>
       <CustomComponentfrom />
     </template>
+    <template #nav-bar-content-after><I18nSelector /></template>
   </DefaultTheme.Layout>
 </template>
 

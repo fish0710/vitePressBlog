@@ -18,6 +18,8 @@
     "@vueuse/core": "^10.11.1",
     "element-plus": "^2.8.0",
     "element-ui": "^2.15.14",
+    "kiwi-clis": "^1.1.0",
+    "kiwi-intl": "1.2.6-beta.0",
     "oh-my-live2d": "^0.19.3"
   }
 }

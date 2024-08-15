@@ -1,3 +1,5 @@
 # 本站简介
 
-这是我的个人博客，主要记录一些技术笔记、学习心得、生活感悟等。
+## i18n工具
+
+https://github.com/KonghaYao/lobe-cli-toolbox/tree/feature/cn-font/i18n
