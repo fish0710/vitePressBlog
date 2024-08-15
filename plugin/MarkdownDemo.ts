@@ -1,4 +1,8 @@
-export default () => {
+export default (): {
+  enforce: "pre";
+  name: "markdown-demo";
+  transform(src: string, id: string): string | undefined;
+} => {
   return {
     enforce: "pre",
     name: "markdown-demo",

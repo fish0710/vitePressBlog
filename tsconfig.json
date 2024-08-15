@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "target": "ESNext", // 指定ECMAScript目标版本
+      "module": "ESNext", // 指定模块代码生成
+      "moduleResolution": "node", // 模块解析策略
+      "strict": true, // 启用所有严格类型检查选项
+      "jsx": "preserve", // 指定JSX代码生成
+      "sourceMap": true, // 生成相应的.map文件
+      "esModuleInterop": true, // 允许import * as React from 'react'
+      "skipLibCheck": true, // 跳过声明文件的类型检查
+      "forceConsistentCasingInFileNames": true, // 禁止对同一文件使用不一致的大小写引用
+      "noEmit": false, // 不输出文件
+      "baseUrl": "./", // 解析非相对模块名称的基目录
+      "paths": {
+      },
+    },
+  }
+  
