@@ -1,0 +1,1 @@
+import{h as e,c as a,a as t,aS as i}from"./chunks/framework.Cdb2BMi-.js";const p=JSON.parse('{"title":"SSG版本切换","description":"","frontmatter":{},"headers":[],"relativePath":"杂项/SSG版本切换.md","filePath":"杂项/SSG版本切换.md"}'),l={name:"杂项/SSG版本切换.md"},o=i("",3),s=[o];function _(n,r,c,d,h,S){return t(),a("div",null,s)}const f=e(l,[["render",_]]);export{p as __pageData,f as default};

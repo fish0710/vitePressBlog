@@ -1,0 +1,1 @@
+import{h as e,c as o,a as t,aS as s}from"./chunks/framework.Cdb2BMi-.js";const g=JSON.parse('{"title":"Problem","description":"","frontmatter":{},"headers":[],"relativePath":"杂项/shebang.md","filePath":"杂项/shebang.md"}'),a={name:"杂项/shebang.md"},i=s("",9),l=[i];function c(d,n,r,h,u,b){return t(),o("div",null,l)}const _=e(a,[["render",c]]);export{g as __pageData,_ as default};
