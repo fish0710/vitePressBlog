@@ -1,6 +1,6 @@
 module.exports = {
   markdown: {
-    entry: ["./js-to-dart-part1.md"],
+    entry: ["./ohmyzsh.md"],
     entryLocale: "en-US",
     entryExtension: ".md",
     outputLocales: ["zn-CN"],
