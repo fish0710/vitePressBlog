@@ -1,1 +1,0 @@
-import{h as a,c as e,a as t,aS as r}from"./chunks/framework.Cdb2BMi-.js";const f=JSON.parse('{"title":"24-8-14","description":"","frontmatter":{},"headers":[],"relativePath":"杂项/24-8-14.md","filePath":"杂项/24-8-14.md"}'),s={name:"杂项/24-8-14.md"},o=r("",7),n=[o];function p(c,_,i,d,h,l){return t(),e("div",null,n)}const k=a(s,[["render",p]]);export{f as __pageData,k as default};
