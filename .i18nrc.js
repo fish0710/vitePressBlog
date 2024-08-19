@@ -1,14 +1,14 @@
 module.exports = {
   markdown: {
-    entry: ["./ohmyzsh.md"],
-    entryLocale: "en-US",
+    entry: ["./docs/前端/vitePress/*.md"],
+    entryLocale: "zn-CN",
     entryExtension: ".md",
-    outputLocales: ["zn-CN"],
+    outputLocales: ["en-US"],
     outputExtensions: (locale, { getDefaultExtension }) => {
-      return ".zn-CN.md";
+      return "." + locale + ".md";
     },
     outputFileName: (locale, targetFileName) => {
-      return targetFileName.replace("docs");
+      return targetFileName.replace("前端", locale + "\\前端");
     },
   },
 };

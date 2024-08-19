@@ -1,0 +1,2 @@
+# Practices Related to Vite
+
